@@ -1,7 +1,3 @@
-<!--
-# -*- mode: jinja -*-
--->
-
 About google-cloud-bigquery-storage
 ===================================
 
@@ -18,9 +14,97 @@ Summary: BigQuery Storage API API client library
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/google-cloud-bigquery-storage-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/google-cloud-bigquery-storage-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/google-cloud-bigquery-storage-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/google-cloud-bigquery-storage-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/google-cloud-bigquery-storage-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/google-cloud-bigquery-storage-feedstock/branch/master)
+
+<table><tr>
+    <td>Appveyor</td>
+    <td>
+      <a href="https://ci.appveyor.com/project/conda-forge/google-cloud-bigquery-storage-feedstock/branch/master">
+        <img alt="windows" src="https://img.shields.io/appveyor/ci/conda-forge/google-cloud-bigquery-storage-feedstock/master.svg?label=Windows">
+      </a>
+    </td>
+  </tr>
+    
+  <tr>
+    <td>Azure</td>
+    <td>
+      <details>
+        <summary>
+          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6331&branchName=master">
+            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/google-cloud-bigquery-storage-feedstock?branchName=master">
+          </a>
+        </summary>
+        <table>
+          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
+          <tbody><tr>
+              <td>linux_python2.7</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6331&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/google-cloud-bigquery-storage-feedstock?branchName=master&jobName=linux&configuration=linux_python2.7" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_python3.6</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6331&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/google-cloud-bigquery-storage-feedstock?branchName=master&jobName=linux&configuration=linux_python3.6" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_python3.7</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6331&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/google-cloud-bigquery-storage-feedstock?branchName=master&jobName=linux&configuration=linux_python3.7" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_python2.7</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6331&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/google-cloud-bigquery-storage-feedstock?branchName=master&jobName=osx&configuration=osx_python2.7" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_python3.6</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6331&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/google-cloud-bigquery-storage-feedstock?branchName=master&jobName=osx&configuration=osx_python3.6" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_python3.7</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6331&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/google-cloud-bigquery-storage-feedstock?branchName=master&jobName=osx&configuration=osx_python3.7" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_python2.7</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6331&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/google-cloud-bigquery-storage-feedstock?branchName=master&jobName=win&configuration=win_python2.7" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_python3.6</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6331&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/google-cloud-bigquery-storage-feedstock?branchName=master&jobName=win&configuration=win_python3.6" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_python3.7</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6331&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/google-cloud-bigquery-storage-feedstock?branchName=master&jobName=win&configuration=win_python3.7" alt="variant">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================
@@ -115,4 +199,5 @@ Feedstock Maintainers
 =====================
 
 * [@pshiko](https://github.com/pshiko/)
+* [@tswast](https://github.com/tswast/)
 
