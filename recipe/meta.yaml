@@ -22,21 +22,22 @@ outputs:
     build:
       noarch: python
 
-    run:
-      - {{ name }}-core {{ version }}
-      - pandas
-      - fastavro
-      - pyarrow
+    requirements:
+      run:
+        - {{ name }}-core {{ version }}
+        - pandas
+        - fastavro
+        - pyarrow
 
-    test:
-      imports:
-        - google
-        - google.cloud
-        - google.cloud.bigquery_storage_v1beta1
-        - google.cloud.bigquery_storage_v1beta1.gapic
-        - google.cloud.bigquery_storage_v1beta1.gapic.transports
-        - google.cloud.bigquery_storage_v1beta1.proto
-        - google.cloud.bigquery_storage_v1beta1.reader
+      test:
+        imports:
+          - google
+          - google.cloud
+          - google.cloud.bigquery_storage_v1beta1
+          - google.cloud.bigquery_storage_v1beta1.gapic
+          - google.cloud.bigquery_storage_v1beta1.gapic.transports
+          - google.cloud.bigquery_storage_v1beta1.proto
+          - google.cloud.bigquery_storage_v1beta1.reader
 
     about:
       home: https://github.com/GoogleCloudPlatform/google-cloud-python
