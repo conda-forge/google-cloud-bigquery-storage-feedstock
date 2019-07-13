@@ -1,5 +1,5 @@
-About google-cloud-bigquery-storage
-===================================
+About google-cloud-bigquery-storage-split
+=========================================
 
 Home: https://github.com/GoogleCloudPlatform/google-cloud-python
 
@@ -7,8 +7,21 @@ Package license: Apache-2.0
 
 Feedstock license: BSD 3-Clause
 
-Summary: BigQuery Storage API API client library
+Summary: Core library for BigQuery Storage API
 
+google-cloud-bigquery-storage-core the core client library for connecting to the
+BigQuery Storage API.
+
+Supported Python Versions
+-------------------------
+Python >= 3.5
+
+Deprecated Python Versions
+--------------------------
+Python == 2.7
+
+- Python 2.7 support will be removed on January 1, 2020.
+- protobuf does not support Visual C++ 2008, windows py27 package not available
 
 
 Current build status
@@ -78,24 +91,17 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>win_python2.7</td>
+              <td>win_python3.6vc14</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6331&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/google-cloud-bigquery-storage-feedstock?branchName=master&jobName=win&configuration=win_python2.7" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/google-cloud-bigquery-storage-feedstock?branchName=master&jobName=win&configuration=win_python3.6vc14" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_python3.6</td>
+              <td>win_python3.7vc14</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6331&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/google-cloud-bigquery-storage-feedstock?branchName=master&jobName=win&configuration=win_python3.6" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_python3.7</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6331&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/google-cloud-bigquery-storage-feedstock?branchName=master&jobName=win&configuration=win_python3.7" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/google-cloud-bigquery-storage-feedstock?branchName=master&jobName=win&configuration=win_python3.7vc14" alt="variant">
                 </a>
               </td>
             </tr>
@@ -113,20 +119,21 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-google--cloud--bigquery--storage-green.svg)](https://anaconda.org/conda-forge/google-cloud-bigquery-storage) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/google-cloud-bigquery-storage.svg)](https://anaconda.org/conda-forge/google-cloud-bigquery-storage) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/google-cloud-bigquery-storage.svg)](https://anaconda.org/conda-forge/google-cloud-bigquery-storage) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/google-cloud-bigquery-storage.svg)](https://anaconda.org/conda-forge/google-cloud-bigquery-storage) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-google--cloud--bigquery--storage--core-green.svg)](https://anaconda.org/conda-forge/google-cloud-bigquery-storage-core) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/google-cloud-bigquery-storage-core.svg)](https://anaconda.org/conda-forge/google-cloud-bigquery-storage-core) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/google-cloud-bigquery-storage-core.svg)](https://anaconda.org/conda-forge/google-cloud-bigquery-storage-core) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/google-cloud-bigquery-storage-core.svg)](https://anaconda.org/conda-forge/google-cloud-bigquery-storage-core) |
 
-Installing google-cloud-bigquery-storage
-========================================
+Installing google-cloud-bigquery-storage-split
+==============================================
 
-Installing `google-cloud-bigquery-storage` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `google-cloud-bigquery-storage-split` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 ```
 
-Once the `conda-forge` channel has been enabled, `google-cloud-bigquery-storage` can be installed with:
+Once the `conda-forge` channel has been enabled, `google-cloud-bigquery-storage, google-cloud-bigquery-storage-core` can be installed with:
 
 ```
-conda install google-cloud-bigquery-storage
+conda install google-cloud-bigquery-storage google-cloud-bigquery-storage-core
 ```
 
 It is possible to list all of the versions of `google-cloud-bigquery-storage` available on your platform with:
@@ -174,17 +181,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating google-cloud-bigquery-storage-feedstock
-================================================
+Updating google-cloud-bigquery-storage-split-feedstock
+======================================================
 
-If you would like to improve the google-cloud-bigquery-storage recipe or build a new
+If you would like to improve the google-cloud-bigquery-storage-split recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/google-cloud-bigquery-storage-feedstock are
+Note that all branches in the conda-forge/google-cloud-bigquery-storage-split-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
