@@ -17,6 +17,12 @@ build:
   # requirement on C++ 11. VS 2008 is not supported.
   skip: True  # [win and vc<14]
 
+requirements:
+  host:
+    - python
+    - pip >=18.1
+    - setuptools >=34.0.0
+
 outputs:
   - name: {{ name }}
     build:
