@@ -23,6 +23,11 @@ outputs:
       noarch: python
 
     requirements:
+      host:
+        - python
+        - pip >=18.1
+        - setuptools >=34.0.0
+
       run:
         - {{ name }}-core {{ version }}
         - pandas
