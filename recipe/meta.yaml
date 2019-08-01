@@ -88,9 +88,7 @@ outputs:
         - python
         # Backport of enum for Python < 3.4.
         - enum34  # [py2k]
-        - google-api-core >=1.6.0,<2.0.0dev
-        - googleapis-common-protos >=1.5.9,<2.0.0dev
-        - grpcio >=1.8.2
+        - google-api-core-grpc >=1.14.0,<2.0.0dev
 
       run_constrained:
         - pandas >=0.17.1
