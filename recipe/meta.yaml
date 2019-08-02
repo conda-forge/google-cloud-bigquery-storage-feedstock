@@ -1,6 +1,6 @@
 {% set name = "google-cloud-bigquery-storage" %}
-{% set version = "0.6.0" %}
-{% set sha256 = "479454b926617e11e5d7b62d81c5a8b3cf6c3dee74f15b3f1f9cd7627620b421" %}
+{% set version = "0.7.0" %}
+{% set sha256 = "c389d1ffaead18ec1fe02d260c6abb4d2968cce9e24d99be4d6b8e37b7971a03" %}
 
 package:
   name: "{{ name|lower }}-split"
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   # Conda package for protobuf does not support Python 2.7 on Windows due to
   # requirement on C++ 11. VS 2008 is not supported.
   skip: True  # [win and vc<14]
@@ -88,9 +88,7 @@ outputs:
         - python
         # Backport of enum for Python < 3.4.
         - enum34  # [py2k]
-        - google-api-core >=1.6.0,<2.0.0dev
-        - googleapis-common-protos >=1.5.9,<2.0.0dev
-        - grpcio >=1.8.2
+        - google-api-core-grpc >=1.14.0,<2.0.0dev
 
       run_constrained:
         - pandas >=0.17.1
