@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   # Conda package for protobuf does not support Python 2.7 on Windows due to
   # requirement on C++ 11. VS 2008 is not supported.
   skip: True  # [win and vc<14]
@@ -139,5 +139,6 @@ about:
 
 extra:
   recipe-maintainers:
+    - leahecole
     - pshiko
     - tswast
