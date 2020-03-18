@@ -1,10 +1,10 @@
 {% set name = "google-cloud-bigquery-storage" %}
-{% set version = "0.7.0" %}
-{% set sha256 = "c389d1ffaead18ec1fe02d260c6abb4d2968cce9e24d99be4d6b8e37b7971a03" %}
+{% set version = "0.8.0" %}
+{% set sha256 = "37bbe332d1b1b2e8f6496d2c62bfece2a172c4d884e58afa00651fef3ae879e5" %}
 
 package:
-  name: "{{ name|lower }}-split"
-  version: "{{ version }}"
+  name: {{ name|lower }}-split
+  version: {{ version }}
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
@@ -12,10 +12,10 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   # Conda package for protobuf does not support Python 2.7 on Windows due to
   # requirement on C++ 11. VS 2008 is not supported.
-  skip: True  # [win and vc<14]
+  skip: true  # [win and vc<14]
 
 requirements:
   host:
@@ -55,7 +55,7 @@ outputs:
       license: Apache-2.0
       license_family: Apache
       license_file: LICENSE
-      summary: "Batteries-included library for BigQuery Storage API"
+      summary: Batteries-included library for BigQuery Storage API
       description: |
         {{ name }} installs {{ name }}-core and the extra requirements for
         parsing table data. Avro and Arrow data formats are supported.
@@ -75,8 +75,8 @@ outputs:
 
   - name: {{ name }}-core
     build:
-      script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
-      skip: True  # [win and vc<14]
+      script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv '
+      skip: true  # [win and vc<14]
 
     requirements:
       host:
@@ -110,7 +110,7 @@ outputs:
       license: Apache-2.0
       license_family: Apache
       license_file: LICENSE
-      summary: "Core library for BigQuery Storage API"
+      summary: Core library for BigQuery Storage API
       description: |
         {{ name }}-core the core client library for connecting to the
         BigQuery Storage API.
@@ -133,7 +133,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: "BigQuery Storage API client library"
+  summary: BigQuery Storage API client library
   doc_url: https://googleapis.github.io/google-cloud-python/latest/bigquery_storage/index.html
   dev_url: https://github.com/googleapis/google-cloud-python/tree/master/bigquery_storage
 
