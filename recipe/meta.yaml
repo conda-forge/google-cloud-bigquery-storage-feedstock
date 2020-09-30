@@ -36,9 +36,9 @@ outputs:
 
       run:
         - {{ name }}-core {{ version }}
-        - pandas >=0.17.1
-        - fastavro >=0.21.2
-        - pyarrow >=0.15.0
+        - pandas
+        - fastavro
+        - pyarrow
 
     test:
       imports:
@@ -93,7 +93,7 @@ outputs:
       run_constrained:
         - pandas >=0.17.1
         - fastavro >=0.21.2
-        - pyarrow >=0.13.0
+        - pyarrow >=0.15.0
 
     test:
       imports:
