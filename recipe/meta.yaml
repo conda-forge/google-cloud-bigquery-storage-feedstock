@@ -41,6 +41,9 @@ outputs:
         - pyarrow
 
     test:
+      requires:
+        - python
+        - pip
       imports:
         - google
         - google.cloud
@@ -50,6 +53,8 @@ outputs:
         - google.cloud.bigquery_storage_v1.proto
         - google.cloud.bigquery_storage_v1.services.big_query_read.client
         - google.cloud.bigquery_storage_v1.types
+      commands:
+        - python -m pip check
 
     about:
       home: https://github.com/googleapis/python-bigquery-storage
@@ -86,17 +91,20 @@ outputs:
         - setuptools >=34.0.0
 
       run:
-        - python
-        # Backport of enum for Python < 3.4.
-        - enum34  # [py2k]
+        - python >=3.6
         - google-api-core-grpc >=1.22.2,<2.0.0dev
+        - proto-plus >=1.4.0
+        - libcst >=0.2.5
 
       run_constrained:
         - pandas >=0.17.1
         - fastavro >=0.21.2
-        - pyarrow >=0.13.0
+        - pyarrow >=0.15.0
 
     test:
+      requires:
+        - python
+        - pip
       imports:
         - google
         - google.cloud
@@ -106,6 +114,8 @@ outputs:
         - google.cloud.bigquery_storage_v1.proto
         - google.cloud.bigquery_storage_v1.services.big_query_read.client
         - google.cloud.bigquery_storage_v1.types
+      commands:
+        - python -m pip check
 
     about:
       home: https://github.com/googleapis/python-bigquery-storage
