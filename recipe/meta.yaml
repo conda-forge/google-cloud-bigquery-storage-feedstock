@@ -82,6 +82,7 @@ outputs:
   - name: {{ name }}-core
     build:
       noarch: python
+      script: {{ PYTHON }} -m pip install . -vv
 
     requirements:
       host:
