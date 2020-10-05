@@ -1,6 +1,6 @@
 {% set name = "google-cloud-bigquery-storage" %}
-{% set version = "1.1.0" %}
-{% set sha256 = "c92533cedbb672f1a35555c112d4d5cccb9f8f6d0e98a604fbf98223773adad3" %}
+{% set version = "2.0.0" %}
+{% set sha256 = "cebeaf1da7b7e4e3fd95e4a51a6d9c26dc49027d5191ba1fe894d9e1ef259592" %}
 
 package:
   name: {{ name|lower }}-split
@@ -47,11 +47,12 @@ outputs:
       imports:
         - google
         - google.cloud
-        - google.cloud.bigquery_storage_v1beta1
-        - google.cloud.bigquery_storage_v1beta1.gapic
-        - google.cloud.bigquery_storage_v1beta1.gapic.transports
-        - google.cloud.bigquery_storage_v1beta1.proto
-        - google.cloud.bigquery_storage_v1beta1.reader
+        - google.cloud.bigquery_storage
+        - google.cloud.bigquery_storage_v1
+        - google.cloud.bigquery_storage_v1.client
+        - google.cloud.bigquery_storage_v1.proto
+        - google.cloud.bigquery_storage_v1.services.big_query_read.client
+        - google.cloud.bigquery_storage_v1.types
       commands:
         - python -m pip check
 
@@ -67,21 +68,21 @@ outputs:
 
         Supported Python Versions
         -------------------------
-        Python >= 3.5
+        Python >= 3.6
 
         Deprecated Python Versions
         --------------------------
-        Python == 2.7
+        Python == 2.7, Python == 3.5.
 
-        - Python 2.7 support will be removed on January 1, 2020.
-        - protobuf does not support Visual C++ 2008, windows py27 package not available
+        The last version of this library compatible with Python 2.7
+        and 3.5 is google-cloud-bigquery-storage==1.1.0.
       doc_url: https://googleapis.dev/python/bigquerystorage/latest/index.html
       dev_url: https://github.com/googleapis/python-bigquery-storage
 
   - name: {{ name }}-core
     build:
-      script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv '
-      skip: true  # [win and vc<14]
+      noarch: python
+      script: {{ PYTHON }} -m pip install . -vv
 
     requirements:
       host:
@@ -90,10 +91,10 @@ outputs:
         - setuptools >=34.0.0
 
       run:
-        - python
-        # Backport of enum for Python < 3.4.
-        - enum34  # [py2k]
-        - google-api-core-grpc >=1.14.0,<2.0.0dev
+        - python >=3.6
+        - google-api-core-grpc >=1.22.2,<2.0.0dev
+        - proto-plus >=1.4.0
+        - libcst >=0.2.5
 
       run_constrained:
         - pandas >=0.17.1
@@ -107,11 +108,12 @@ outputs:
       imports:
         - google
         - google.cloud
-        - google.cloud.bigquery_storage_v1beta1
-        - google.cloud.bigquery_storage_v1beta1.gapic
-        - google.cloud.bigquery_storage_v1beta1.gapic.transports
-        - google.cloud.bigquery_storage_v1beta1.proto
-        - google.cloud.bigquery_storage_v1beta1.reader
+        - google.cloud.bigquery_storage
+        - google.cloud.bigquery_storage_v1
+        - google.cloud.bigquery_storage_v1.client
+        - google.cloud.bigquery_storage_v1.proto
+        - google.cloud.bigquery_storage_v1.services.big_query_read.client
+        - google.cloud.bigquery_storage_v1.types
       commands:
         - python -m pip check
 
@@ -127,14 +129,14 @@ outputs:
 
         Supported Python Versions
         -------------------------
-        Python >= 3.5
+        Python >= 3.6
 
         Deprecated Python Versions
         --------------------------
-        Python == 2.7
+        Python == 2.7, Python == 3.5.
 
-        - Python 2.7 support will be removed on January 1, 2020.
-        - protobuf does not support Visual C++ 2008, windows py27 package not available
+        The last version of this library compatible with Python 2.7
+        and 3.5 is google-cloud-bigquery-storage==1.1.0.
       doc_url: https://googleapis.dev/python/bigquerystorage/latest/index.html
       dev_url: https://github.com/googleapis/python-bigquery-storage
 
