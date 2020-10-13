@@ -5,9 +5,13 @@ Home: https://github.com/googleapis/python-bigquery-storage
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/google-cloud-bigquery-storage-feedstock/blob/master/LICENSE.txt)
 
 Summary: Core library for BigQuery Storage API
+
+Development: https://github.com/googleapis/python-bigquery-storage
+
+Documentation: https://googleapis.dev/python/bigquerystorage/latest/index.html
 
 google-cloud-bigquery-storage-core the core client library for connecting to the
 BigQuery Storage API.
@@ -130,7 +134,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@leahecole](https://github.com/leahecole/)
 * [@pshiko](https://github.com/pshiko/)
 * [@tswast](https://github.com/tswast/)
 
