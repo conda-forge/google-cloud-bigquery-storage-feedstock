@@ -1,6 +1,9 @@
 {% set name = "google-cloud-bigquery-storage" %}
-{% set version = "2.0.0" %}
-{% set sha256 = "cebeaf1da7b7e4e3fd95e4a51a6d9c26dc49027d5191ba1fe894d9e1ef259592" %}
+{% set version = "2.0.1" %}
+{% set sha256 = "661f18998e34c2db76cca8e7cae01862d33c5589b6181ba42e401db34eafdc15" %}
+{% set dependency_pandas = "pandas >=0.17.1" %}
+{% set dependency_fastavro = "fastavro >=0.21.2" %}
+{% set dependency_pyarrow= "pyarrow >=0.15.0" %}
 
 package:
   name: {{ name|lower }}-split
@@ -12,7 +15,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   noarch: python
 
 requirements:
@@ -34,9 +37,9 @@ outputs:
 
       run:
         - {{ name }}-core {{ version }}
-        - pandas
-        - fastavro
-        - pyarrow
+        - {{ dependency_pandas }}
+        - {{ dependency_fastavro }}
+        - {{ dependency_pyarrow }}
 
     test:
       requires:
@@ -93,11 +96,13 @@ outputs:
         - google-api-core-grpc >=1.22.2,<2.0.0dev
         - proto-plus >=1.4.0
         - libcst >=0.2.5
+        # Workaround for https://github.com/conda-forge/aiohttp-feedstock/issues/43
+        - yarl <1.6.0,>=1.0
 
       run_constrained:
-        - pandas >=0.17.1
-        - fastavro >=0.21.2
-        - pyarrow >=0.15.0
+        - {{ dependency_pandas }}
+        - {{ dependency_fastavro }}
+        - {{ dependency_pyarrow }}
 
     test:
       requires:
