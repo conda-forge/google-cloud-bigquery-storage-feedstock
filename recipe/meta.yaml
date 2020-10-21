@@ -96,6 +96,8 @@ outputs:
         - google-api-core-grpc >=1.22.2,<2.0.0dev
         - proto-plus >=1.4.0
         - libcst >=0.2.5
+        # Workaround for https://github.com/conda-forge/aiohttp-feedstock/issues/43
+        - yarl <1.6.0,>=1.0
 
       run_constrained:
         - {{ dependency_pandas }}
