@@ -15,7 +15,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: python
 
 requirements:
@@ -83,7 +83,7 @@ outputs:
   - name: {{ name }}-core
     build:
       noarch: python
-      script: {{ PYTHON }} -m pip install . -vv
+      script: {{ PYTHON }} -m pip install . -vv --no-deps
 
     requirements:
       host:
