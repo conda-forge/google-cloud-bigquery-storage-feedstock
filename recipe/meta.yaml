@@ -1,9 +1,12 @@
 {% set dependency_fastavro = "fastavro >=0.21.2" %}
 {% set dependency_pandas = "pandas >=0.17.1" %}
 {% set dependency_pyarrow = "pyarrow >=0.15.0" %}
+{% set dependency_fastavro = "fastavro >=0.21.2" %}
+{% set dependency_pandas = "pandas >=0.17.1" %}
+{% set dependency_pyarrow = "pyarrow >=0.15.0" %}
 {% set name = "google-cloud-bigquery-storage" %}
-{% set version = "2.1.0" %}
-{% set sha256 = "7da8691d218e494e2688f3c72cf4249d504b0a55fe41cb1ac6e7903c1e03a3d4" %}
+{% set version = "2.2.1" %}
+{% set sha256 = "2211cf3af04a59be657573de689f3644a97a4f6cbd4af2cbc4ae837303261580" %}
 
 package:
   name: {{ name|lower }}-split
@@ -15,7 +18,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   noarch: python
 
 requirements:
