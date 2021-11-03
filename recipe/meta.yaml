@@ -48,9 +48,15 @@ outputs:
         - google.cloud.bigquery_storage
         - google.cloud.bigquery_storage_v1
         - google.cloud.bigquery_storage_v1.client
-        - google.cloud.bigquery_storage_v1.proto
+        - google.cloud.bigquery_storage_v1.exceptions
+        - google.cloud.bigquery_storage_v1.reader
+        - google.cloud.bigquery_storage_v1.services.big_query_read.async_client
         - google.cloud.bigquery_storage_v1.services.big_query_read.client
+        - google.cloud.bigquery_storage_v1.services.big_query_write.async_client
+        - google.cloud.bigquery_storage_v1.services.big_query_write.client
         - google.cloud.bigquery_storage_v1.types
+        - google.cloud.bigquery_storage_v1.types.storage
+        - google.cloud.bigquery_storage_v1.writer
       commands:
         - python -m pip check
 
