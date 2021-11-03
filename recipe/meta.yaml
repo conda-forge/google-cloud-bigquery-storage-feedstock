@@ -1,12 +1,6 @@
-{% set dependency_fastavro = "fastavro >=0.21.2" %}
-{% set dependency_pandas = "pandas >=0.17.1" %}
-{% set dependency_pyarrow = "pyarrow >=0.15.0" %}
-{% set dependency_fastavro = "fastavro >=0.21.2" %}
-{% set dependency_pandas = "pandas >=0.17.1" %}
-{% set dependency_pyarrow = "pyarrow >=0.15.0" %}
 {% set name = "google-cloud-bigquery-storage" %}
-{% set version = "2.2.1" %}
-{% set sha256 = "2211cf3af04a59be657573de689f3644a97a4f6cbd4af2cbc4ae837303261580" %}
+{% set version = "2.9.1" %}
+{% set sha256 = "c2639c1245c06870de48d2ef229560cb35da555485f101fec9e556162ca1807a" %}
 
 package:
   name: {{ name|lower }}-split
@@ -40,9 +34,9 @@ outputs:
 
       run:
         - {{ name }}-core {{ version }}
-        - {{ dependency_pandas }}
-        - {{ dependency_fastavro }}
-        - {{ dependency_pyarrow }}
+        - pandas >=0.21.1
+        - fastavro >=0.21.2
+        - pyarrow >=0.15.0
 
     test:
       requires:
@@ -54,9 +48,15 @@ outputs:
         - google.cloud.bigquery_storage
         - google.cloud.bigquery_storage_v1
         - google.cloud.bigquery_storage_v1.client
-        - google.cloud.bigquery_storage_v1.proto
+        - google.cloud.bigquery_storage_v1.exceptions
+        - google.cloud.bigquery_storage_v1.reader
+        - google.cloud.bigquery_storage_v1.services.big_query_read.async_client
         - google.cloud.bigquery_storage_v1.services.big_query_read.client
+        - google.cloud.bigquery_storage_v1.services.big_query_write.async_client
+        - google.cloud.bigquery_storage_v1.services.big_query_write.client
         - google.cloud.bigquery_storage_v1.types
+        - google.cloud.bigquery_storage_v1.types.storage
+        - google.cloud.bigquery_storage_v1.writer
       commands:
         - python -m pip check
 
@@ -96,16 +96,15 @@ outputs:
 
       run:
         - python >=3.6
-        - google-api-core-grpc >=1.22.2,<2.0.0dev
-        - proto-plus >=1.4.0
+        - google-api-core-grpc >=1.26.0,<3.0.0dev
+        - proto-plus >=1.18.0
+        - packaging >=14.3
         - libcst >=0.2.5
-        # Workaround for https://github.com/conda-forge/aiohttp-feedstock/issues/43
-        - yarl <1.6.0,>=1.0
 
       run_constrained:
-        - {{ dependency_pandas }}
-        - {{ dependency_fastavro }}
-        - {{ dependency_pyarrow }}
+        - pandas >=0.21.1
+        - fastavro >=0.21.2
+        - pyarrow >=0.15.0
 
     test:
       requires:
@@ -117,9 +116,15 @@ outputs:
         - google.cloud.bigquery_storage
         - google.cloud.bigquery_storage_v1
         - google.cloud.bigquery_storage_v1.client
-        - google.cloud.bigquery_storage_v1.proto
+        - google.cloud.bigquery_storage_v1.exceptions
+        - google.cloud.bigquery_storage_v1.reader
+        - google.cloud.bigquery_storage_v1.services.big_query_read.async_client
         - google.cloud.bigquery_storage_v1.services.big_query_read.client
+        - google.cloud.bigquery_storage_v1.services.big_query_write.async_client
+        - google.cloud.bigquery_storage_v1.services.big_query_write.client
         - google.cloud.bigquery_storage_v1.types
+        - google.cloud.bigquery_storage_v1.types.storage
+        - google.cloud.bigquery_storage_v1.writer
       commands:
         - python -m pip check
 
