@@ -1,6 +1,6 @@
 {% set name = "google-cloud-bigquery-storage" %}
-{% set version = "2.9.1" %}
-{% set sha256 = "c2639c1245c06870de48d2ef229560cb35da555485f101fec9e556162ca1807a" %}
+{% set version = "2.10.0" %}
+{% set sha256 = "7e313338caa76bd71a6583224a703dbf63177dc689b27beb511244a782c6d32d" %}
 
 package:
   name: {{ name|lower }}-split
@@ -96,9 +96,8 @@ outputs:
 
       run:
         - python >=3.6
-        - google-api-core-grpc >=1.26.0,<3.0.0dev
+        - google-api-core-grpc >=1.28.0,<3.0.0dev
         - proto-plus >=1.18.0
-        - packaging >=14.3
         - libcst >=0.2.5
 
       run_constrained:
