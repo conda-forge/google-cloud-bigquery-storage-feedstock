@@ -1,6 +1,6 @@
 {% set name = "google-cloud-bigquery-storage" %}
-{% set version = "2.11.0" %}
-{% set sha256 = "e89903bd751a141a6137cdcea620c050ffd9d0765138005199b1127323c3a40e" %}
+{% set version = "2.12.0" %}
+{% set sha256 = "55b6cc628ce2c89c6b4e4ccbb125f3d3825813b0aa08945d42a4845141f3f9ef" %}
 
 package:
   name: {{ name|lower }}-split
