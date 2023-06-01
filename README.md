@@ -1,11 +1,26 @@
+About google-cloud-bigquery-storage-split-feedstock
+===================================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/google-cloud-bigquery-storage-feedstock/blob/main/LICENSE.txt)
+
 About google-cloud-bigquery-storage-split
-=========================================
+-----------------------------------------
 
 Home: https://github.com/googleapis/python-bigquery-storage
 
 Package license: Apache-2.0
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/google-cloud-bigquery-storage-feedstock/blob/main/LICENSE.txt)
+Summary: BigQuery Storage API client library
+
+Development: https://github.com/googleapis/python-bigquery-storage
+
+Documentation: https://googleapis.dev/python/bigquerystorage/latest/index.html
+About google-cloud-bigquery-storage-core
+----------------------------------------
+
+Home: https://github.com/googleapis/python-bigquery-storage
+
+Package license: Apache-2.0
 
 Summary: Core library for BigQuery Storage API
 
@@ -15,6 +30,33 @@ Documentation: https://googleapis.dev/python/bigquerystorage/latest/index.html
 
 google-cloud-bigquery-storage-core the core client library for connecting to the
 BigQuery Storage API.
+
+Supported Python Versions
+-------------------------
+Python >= 3.7
+
+Deprecated Python Versions
+--------------------------
+Python == 2.7, Python <= 3.6.
+
+The last version of this library compatible with Python 2.7
+and 3.5 is google-cloud-bigquery-storage==1.1.0.
+
+About google-cloud-bigquery-storage
+-----------------------------------
+
+Home: https://github.com/googleapis/python-bigquery-storage
+
+Package license: Apache-2.0
+
+Summary: Batteries-included library for BigQuery Storage API
+
+Development: https://github.com/googleapis/python-bigquery-storage
+
+Documentation: https://googleapis.dev/python/bigquerystorage/latest/index.html
+
+google-cloud-bigquery-storage installs google-cloud-bigquery-storage-core and the extra requirements for
+parsing table data. Avro and Arrow data formats are supported.
 
 Supported Python Versions
 -------------------------
