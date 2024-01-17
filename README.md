@@ -211,4 +211,5 @@ Feedstock Maintainers
 * [@chalmerlowe](https://github.com/chalmerlowe/)
 * [@pshiko](https://github.com/pshiko/)
 * [@tswast](https://github.com/tswast/)
+* [@xhochy](https://github.com/xhochy/)
 
