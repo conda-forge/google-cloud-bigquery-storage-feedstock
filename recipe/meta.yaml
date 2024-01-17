@@ -1,6 +1,6 @@
 {% set name = "google-cloud-bigquery-storage" %}
-{% set version = "2.22.0" %}
-{% set sha256 = "f6d8c7b3ab9b574c66977fcee9d336e334ad1a3843a722be19123640e7808ea3" %}
+{% set version = "2.24.0" %}
+{% set sha256 = "b4af5b9aacd8396b8407d1b877601a376d8eea6d192823a8a7881bd2fdc076ce" %}
 
 package:
   name: {{ name|lower }}-split
@@ -165,3 +165,4 @@ extra:
     - chalmerlowe
     - pshiko
     - tswast
+    - xhochy
