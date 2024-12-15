@@ -8,16 +8,16 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: python
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip >=18.1
     - setuptools >=34.0.0
 
@@ -28,12 +28,12 @@ outputs:
 
     requirements:
       host:
-        - python >=3.8
+        - python {{ python_min }}
         - pip >=18.1
         - setuptools >=34.0.0
 
       run:
-        - python >=3.8
+        - python >={{ python_min }}
         - {{ name }}-core {{ version }}
         - pandas >=0.21.1
         - fastavro >=0.21.2
@@ -41,7 +41,7 @@ outputs:
 
     test:
       requires:
-        - python
+        - python {{ python_min }}
         - pip
       imports:
         - google
@@ -91,12 +91,12 @@ outputs:
 
     requirements:
       host:
-        - python >=3.8
+        - python {{ python_min }}
         - pip >=18.1
         - setuptools >=34.0.0
 
       run:
-        - python >=3.8
+        - python >={{ python_min }}
         - google-api-core-grpc >=1.34.0,<3.0.0dev,!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,!=2.10.*
         - proto-plus >=1.22.0,<2.0.0dev
         - protobuf >=3.19.5,<5.0.0dev,!=3.20.0,!=3.20.1,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
@@ -109,7 +109,7 @@ outputs:
 
     test:
       requires:
-        - python
+        - python {{ python_min }}
         - pip
       imports:
         - google
