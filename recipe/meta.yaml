@@ -62,7 +62,7 @@ outputs:
         - python -m pip check
 
     about:
-      home: https://github.com/googleapis/python-bigquery-storage
+      home: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-bigquery-storage
       license: Apache-2.0
       license_family: Apache
       license_file: LICENSE
@@ -81,8 +81,8 @@ outputs:
 
         The last version of this library compatible with Python 2.7
         and 3.5 is google-cloud-bigquery-storage==1.1.0.
-      doc_url: https://googleapis.dev/python/bigquerystorage/latest/index.html
-      dev_url: https://github.com/googleapis/python-bigquery-storage
+      doc_url: https://cloud.google.com/python/docs/reference/bigquerystorage/latest
+      dev_url: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-bigquery-storage
 
   - name: {{ name }}-core
     build:
@@ -149,17 +149,17 @@ outputs:
 
         The last version of this library compatible with Python 2.7
         and 3.5 is google-cloud-bigquery-storage==1.1.0.
-      doc_url: https://googleapis.dev/python/bigquerystorage/latest/index.html
-      dev_url: https://github.com/googleapis/python-bigquery-storage
+      doc_url: https://cloud.google.com/python/docs/reference/bigquerystorage/latest
+      dev_url: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-bigquery-storage
 
 about:
-  home: https://github.com/googleapis/python-bigquery-storage
+  home: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-bigquery-storage
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
   summary: BigQuery Storage API client library
-  doc_url: https://googleapis.dev/python/bigquerystorage/latest/index.html
-  dev_url: https://github.com/googleapis/python-bigquery-storage
+  doc_url: https://cloud.google.com/python/docs/reference/bigquerystorage/latest
+  dev_url: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-bigquery-storage
 
 extra:
   recipe-maintainers:
