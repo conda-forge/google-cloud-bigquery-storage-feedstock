@@ -7,28 +7,28 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/google-cloud-bi
 About google-cloud-bigquery-storage-split
 -----------------------------------------
 
-Home: https://github.com/googleapis/python-bigquery-storage
+Home: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-bigquery-storage
 
 Package license: Apache-2.0
 
 Summary: BigQuery Storage API client library
 
-Development: https://github.com/googleapis/python-bigquery-storage
+Development: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-bigquery-storage
 
-Documentation: https://googleapis.dev/python/bigquerystorage/latest/index.html
+Documentation: https://cloud.google.com/python/docs/reference/bigquerystorage/latest
 
 About google-cloud-bigquery-storage
 -----------------------------------
 
-Home: https://github.com/googleapis/python-bigquery-storage
+Home: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-bigquery-storage
 
 Package license: Apache-2.0
 
 Summary: Batteries-included library for BigQuery Storage API
 
-Development: https://github.com/googleapis/python-bigquery-storage
+Development: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-bigquery-storage
 
-Documentation: https://googleapis.dev/python/bigquerystorage/latest/index.html
+Documentation: https://cloud.google.com/python/docs/reference/bigquerystorage/latest
 
 google-cloud-bigquery-storage installs google-cloud-bigquery-storage-core and the extra requirements for
 parsing table data. Avro and Arrow data formats are supported.
@@ -54,9 +54,9 @@ Package license: Apache-2.0
 
 Summary: Core library for BigQuery Storage API
 
-Development: https://github.com/googleapis/python-bigquery-storage
+Development: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-bigquery-storage
 
-Documentation: https://googleapis.dev/python/bigquerystorage/latest/index.html
+Documentation: https://cloud.google.com/python/docs/reference/bigquerystorage/latest
 
 google-cloud-bigquery-storage-core the core client library for connecting to the
 BigQuery Storage API.
