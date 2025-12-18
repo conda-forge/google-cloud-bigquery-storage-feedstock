@@ -1,5 +1,5 @@
 {% set name = "google-cloud-bigquery-storage" %}
-{% set version = "2.35.0" %}
+{% set version = "2.36.0" %}
 
 package:
   name: {{ name|lower }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: c9bab6b8e41d6cb9806e589e65f320c89ada84f466e61566b7208d87924c1430
+  sha256: d3c1ce9d2d3a4d7116259889dcbe3c7c70506f71f6ce6bbe54aa0a68bbba8f8f
 
 build:
   number: 0
