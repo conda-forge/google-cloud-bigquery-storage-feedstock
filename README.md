@@ -30,21 +30,6 @@ Development: https://github.com/googleapis/google-cloud-python/tree/main/package
 
 Documentation: https://cloud.google.com/python/docs/reference/bigquerystorage/latest
 
-google-cloud-bigquery-storage installs google-cloud-bigquery-storage-core and the extra requirements for
-parsing table data. Avro and Arrow data formats are supported.
-
-Supported Python Versions
--------------------------
-Python >= 3.8
-
-Deprecated Python Versions
---------------------------
-Python == 2.7, Python <= 3.7.
-
-The last version of this library compatible with Python 2.7
-and 3.5 is google-cloud-bigquery-storage==1.1.0.
-
-
 About google-cloud-bigquery-storage-core
 ----------------------------------------
 
